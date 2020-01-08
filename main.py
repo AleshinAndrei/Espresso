@@ -13,7 +13,8 @@ class MyWidget(QMainWindow):
         res = cur.execute("SELECT * FROM varieties").fetchall()
         self.table.setColumnCount(7)
         self.table.setHorizontalHeaderLabels(
-            ['ID', 'name', "degree of\n\troasting", 'grinding', 'description', 'price', 'volume']
+            ['ID', 'name', "degree of\n\troasting",
+             'grinding', 'description', 'price', 'volume']
         )
         self.table.setRowCount(len(res))
         for i, row in enumerate(res):
